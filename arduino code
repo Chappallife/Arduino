@@ -1,0 +1,23 @@
+const int ledPin = 4;
+const int ledPin2 = 5;
+const int ledPin3 = 6;
+int ledState = LOW;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (ledState == LOW){
+    ledState = HIGH;
+  }else{
+    ledState = LOW;
+  }
+  digitalWrite(ledPin,ledState);
+  digitalWrite(ledPin2,ledState);
+  digitalWrite(ledPin3,ledState);
+  delay(2000);
+}
